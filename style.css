@@ -1,6 +1,7 @@
 *{
     margin: 0;
-    padding: 0;    
+    padding: 0;
+    font-family: Roboto  , sans-serif; 
 }
 
 html{
@@ -21,22 +22,27 @@ body > .container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.35fr 1fr 0.5fr 3.8fr;
-    background-color: rgb(87, 213, 245);
+    background-color: rgba(0, 0, 0, 0.897);
     padding: 20px;
+    box-shadow: 3px 0px 10px -6px #000000;
+    z-index: 2;
 }
 
 .sidebar > h1{
     max-height: 0;
     grid-template-rows: 1 / 2;
     margin-bottom: 20px;
+    color: rgba(238, 192, 192, 0.507);
 }
 .sidebar .first{
     grid-template-rows: 2 / 3;
     margin-top: 6%;
+    color: rgba(238, 192, 192, 0.507);
 }
 .sidebar .second{
     grid-template-rows: 3 / 4 ;
     margin-top: 8%;
+    color: rgba(238, 192, 192, 0.507);
 }
 
 .sidebar span{
@@ -56,6 +62,8 @@ body > .container{
     grid-template-rows: 1fr 2fr;
     background-color: antiquewhite;
     padding: 1%;
+    box-shadow: -1px 5px 6px -6px #000000;
+    z-index: 1;
 }
 
 .firstFloor{
@@ -68,6 +76,12 @@ body > .container{
     display: grid;
     grid-template-columns: 12fr 88fr;
     grid-template-rows: 1fr;
+}
+
+.firstRoom>span{
+    margin: 0px 8px;
+    justify-self: end;
+    align-self: center;
 }
 
 input{
@@ -128,8 +142,14 @@ input:focus{
     height: 2rem;
     border: none;
     border-radius: 30px;
-    background-color: white;
+    background-color:  rgba(158, 126, 126, 0.952);
     margin: 10px;
+    color: white;
+}
+
+.navButtons button:focus{
+    outline: none;
+    border: 3px solid antiquewhite;
 }
 .navButtons ul{
     align-self: center;
@@ -181,6 +201,7 @@ input:focus{
     border: none;
     border-left: 5px solid yellow;
     border-radius: 20px;
+    box-shadow: 5px 5px 6px -6px #000000;
 }
 
 .text > h2{
@@ -188,9 +209,6 @@ input:focus{
     margin-bottom: 10px;
 }
 
-/* .text > p{
-    font-size: 1.1rem;
-} */
 .projectButtons{
     margin-top: 30px;
 }
@@ -209,6 +227,7 @@ input:focus{
     border-radius: 10px;
     padding: 20px;
     font-size: 1rem;
+    box-shadow: 5px 5px 6px -6px #000000;
 }
 .announcements>.container>div{
     padding: 10px;
@@ -230,6 +249,7 @@ hr{
     border:none;
     border-radius: 10px;
     padding: 20px;
+    box-shadow: 5px 5px 6px -6px #000000;
 }
 
 .trending .profile{
