@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;    
+}
+
+html{
+    height: 100vh;
+    overflow: auto;
+}
+
+body > .container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.8fr 4fr;
+    grid-template-rows: 20% 80%;
+}
+
+.sidebar{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.35fr 1fr 0.5fr 3.8fr;
+    background-color: rgb(87, 213, 245);
+    padding: 20px;
+}
+
+.sidebar > h1{
+    max-height: 0;
+    grid-template-rows: 1 / 2;
+    margin-bottom: 20px;
+}
+.sidebar .first{
+    grid-template-rows: 2 / 3;
+    margin-top: 6%;
+}
+.sidebar .second{
+    grid-template-rows: 3 / 4 ;
+    margin-top: 8%;
+}
+
+.sidebar span{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.sidebar p{
+    font-size: clamp(0.8rem , 1.2rem , 1.4rem );
+}
+
+.nav{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    background-color: antiquewhite;
+    padding: 1%;
+}
+
+.firstFloor{
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.firstFloor .firstRoom{
+    display: grid;
+    grid-template-columns: 12fr 88fr;
+    grid-template-rows: 1fr;
+}
+
+input{
+    border: none;
+    border-radius: 30px;
+    max-width: 70%;
+}
+
+input:focus{
+    outline: none;
+}
+
+.firstFloor .secondRoom{
+    display: grid;
+    grid-template-columns: 0.7fr 1.2fr 6fr;
+    grid-template-rows: 1fr;
+}
+.secondRoom > span{
+    align-self: center;
+    margin-right: 30px;
+}
+.secondRoom > .imageOne{
+    align-self: center;
+    margin-right: clamp(10px , 15px , 30px);
+}
+.secondRoom > p{
+    align-self: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.secondFloor{
+    display: grid;
+    grid-template-columns: 9% 45% 46%;
+    grid-template-rows: 1fr;
+    margin-top: 1.5%;
+}
+
+.secondFloor .imageSecond{
+    margin: 0 7px;
+    justify-self: end;
+}
+.secondFloor>div>p:nth-child(1){
+    font-size: 1rem;
+}
+
+.secondFloor>div>p:nth-child(2){
+    font-size: 1.8rem;
+    margin-top: 1%;
+}
+
+.navButtons{
+    display: grid;
+    margin-right: 3%;
+}
+.navButtons button{
+    font-size: 1.2rem;
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    margin: 10px;
+}
+.navButtons ul{
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 1fr;
+}
+
+.imageOne img{
+    height: 45px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.imageSecond img{
+    height: 75px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.main{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    background-color: rgb(252, 192, 164);
+    padding: 30px;
+}
+
+.projects{
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.projects > h2 , .announcements > h2 , .trending > h2{
+    margin-bottom: 10px;
+}
+
+.projects .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    gap: 30px;
+}
+
+.project{
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-left: 5px solid yellow;
+    border-radius: 20px;
+}
+
+.text > h2{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* .text > p{
+    font-size: 1.1rem;
+} */
+.projectButtons{
+    margin-top: 30px;
+}
+.projectButtons ul{
+    display: grid;
+    grid-template-columns: 11% 11% 11%;
+    grid-template-rows: 1fr;
+    justify-content: end;
+}
+.announcements{
+    grid-area: 1 / 2 / 2 / 3;
+}
+.announcements .container{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1rem;
+}
+.announcements>.container>div{
+    padding: 10px;
+    margin: 5px 0;
+}
+.announcements>.container>div>p{
+    margin-top: 5px;
+}
+hr{
+    width: 80%;
+    margin-left: 10px;
+}
+.trending{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.trending > .container{
+    background-color: white;
+    border:none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.trending .profile{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.trending img{
+    height: 45px;
+    width: auto;
+}
+
+.profile.one img{
+    transform: scaleX(-2);
+}
+
+.profile.three img{
+    transform: scale(2 , -1);
+}
+
+.profile.four img{
+    transform: scale(-1 , 2);
+}
+
+li{
+    list-style: none;
+}
